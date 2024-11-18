@@ -7,7 +7,7 @@ from streamlit_folium import st_folium
 from folium.plugins import MarkerCluster
 
 # 한글 폰트 설정
-plt.rcParams['font.family'] = 'Malgun Gothic'
+plt.rcParams['font.family'] = 'NanumGothic'  # 나눔고딕
 plt.rcParams['axes.unicode_minus'] = False
 
 
