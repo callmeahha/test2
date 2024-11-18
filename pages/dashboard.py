@@ -7,7 +7,7 @@ from streamlit_folium import st_folium
 from folium.plugins import MarkerCluster
 
 
-font_path = 'NanumGothic.ttf'  # 프로젝트 폴더에 폰트 파일 직접 포함
+font_path = './NanumGothic.ttf'  # 프로젝트 폴더에 폰트 파일 직접 포함
 font = font_manager.FontProperties(fname=font_path)
 plt.rcParams['font.family'] = font.get_name()
 
