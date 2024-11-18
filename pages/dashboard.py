@@ -54,23 +54,23 @@ with tab2:
     )
     
     # 첫 번째 차트: 분포도
-    st.subheader(f"{nutrient} nutrient Distribution")
+    st.subheader(f"{nutrient} 분포")
     fig1, ax1 = plt.subplots(figsize=(10, 6))
     plt.hist(df[nutrient], bins=20)
-    plt.title(f'{nutrient} Distribution Plot')
+    plt.title(f"{nutrient} Distribution Plot")
     plt.xlabel(nutrient)
-    plt.ylabel('frequency')
+    plt.ylabel("빈도")
     st.pyplot(fig1)
     
     # 두 번째 차트: 상관관계 히트맵
-    st.subheader("Nutrient Correlations")
+    st.subheader("영양성분 간 상관관계")
     corr = df[["탄수화물", "단백질", "지방", "당류", "칼로리", "평균 가격"]].corr()
     fig2, ax2 = plt.subplots(figsize=(10, 8))
     plt.imshow(corr, cmap='coolwarm', aspect='auto')
     plt.colorbar()
     plt.xticks(range(len(corr.columns)), corr.columns, rotation=45)
     plt.yticks(range(len(corr.columns)), corr.columns)
-    plt.title("Correlation Heatmap")
+    plt.title("상관관계 히트맵")
     st.pyplot(fig2)
     
     # 세 번째 차트: 산점도
@@ -93,7 +93,7 @@ with tab2:
     plt.scatter(df[x_nutrient], df[y_nutrient])
     plt.xlabel(x_nutrient)
     plt.ylabel(y_nutrient)
-    plt.title(f'{x_nutrient} and {y_nutrient} correlation')
+    plt.title(f"{x_nutrient}와 {y_nutrient}의 상관관계")
     st.pyplot(fig3)
 
 # 탭3: 지도 시각화
