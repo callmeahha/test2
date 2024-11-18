@@ -10,6 +10,7 @@ from folium.plugins import MarkerCluster
 plt.rcParams['font.family'] = 'Malgun Gothic'
 plt.rcParams['axes.unicode_minus'] = False
 
+
 st.set_page_config(
     page_title="편의점 영양성분 분석",
     layout="wide"
